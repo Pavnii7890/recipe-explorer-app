@@ -1,0 +1,54 @@
+.create-container {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.create-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 3rem;
+}
+
+.ingredient-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.ingredient-row input {
+  flex-grow: 1;
+}
+
+.btn-remove {
+  background: none;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0.7;
+}
+
+.btn-remove:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+  opacity: 1;
+}
+
+.btn-add {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+.btn-submit {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .create-card {
+    padding: 2rem 1.5rem;
+  }
+}

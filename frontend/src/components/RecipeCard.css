@@ -1,0 +1,77 @@
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.recipe-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--border-color);
+}
+
+.recipe-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--text-secondary);
+}
+
+.recipe-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.recipe-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.recipe-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.recipe-author {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.btn-icon {
+  background: none;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  opacity: 0.3;
+  transition: var(--transition);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.btn-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.btn-icon.saved {
+  opacity: 1;
+  color: var(--primary-color);
+}
