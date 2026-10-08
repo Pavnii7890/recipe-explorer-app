@@ -16,9 +16,10 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container nav-container">
         <Link to="/" className="nav-brand">
-          🍽️ Recipe Explorer
+          ��️ Recipe Explorer
         </Link>
         <div className="nav-links">
+          <Link to="/fridge" className="nav-link">What can I cook?</Link>
           {user ? (
             <>
               <span className="nav-user">Hi, {user.username}</span>

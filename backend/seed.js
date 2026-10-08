@@ -188,7 +188,30 @@ const recipes = [
       '1. Toast the bread until golden and crisp.\n2. Mash the avocado with lemon juice, salt and pepper.\n3. Fry the eggs in oil or butter to your liking.\n4. Spread the avocado on the toast, top each slice with an egg and sprinkle chilli flakes.\n5. Serve immediately.',
   },
 ];
-
+   const categoryByTitle = {
+     'Butter Chicken': 'Main Course',
+     'Paneer Tikka': 'Snack',
+     'Creamy Garlic Pasta': 'Main Course',
+     'Fudgy Chocolate Brownies': 'Dessert',
+     'Masala Dosa': 'Breakfast',
+     'Vegetable Fried Rice': 'Main Course',
+     'Chana Masala': 'Main Course',
+     'Margherita Pizza': 'Main Course',
+     'Masala Chai': 'Drink',
+     'Avocado Toast with Egg': 'Breakfast',
+   };
+   const imageByTitle = {
+  'Butter Chicken': '/images/butter-chicken.jpg',
+  'Paneer Tikka': '/images/paneer-tikka.jpg',
+  'Creamy Garlic Pasta': '/images/creamy-garlic-pasta.jpg',
+  'Fudgy Chocolate Brownies': '/images/chocolate-brownies.jpg',
+  'Masala Dosa': '/images/masala-dosa.jpg',
+  'Vegetable Fried Rice': '/images/vegetable-fried-rice.jpg',
+  'Chana Masala': '/images/chana-masala.jpg',
+  'Margherita Pizza': '/images/margherita-pizza.jpg',
+  'Masala Chai': '/images/masala-chai.jpg',
+  'Avocado Toast with Egg': '/images/avocado-toast-egg.jpg',
+};
 const seed = async () => {
   try {
     await connectDB();
@@ -204,7 +227,12 @@ const seed = async () => {
     const titles = recipes.map((r) => r.title);
     const removed = await Recipe.deleteMany({ title: { $in: titles } });
 
-    const docs = recipes.map((r) => ({ ...r, createdBy: user._id }));
+           const docs = recipes.map((r) => ({
+         ...r,
+         category: categoryByTitle[r.title] || 'Other',
+         imageUrl: imageByTitle[r.title] || '',
+         createdBy: user._id,
+       }));
     const inserted = await Recipe.insertMany(docs);
 
     console.log(

@@ -24,6 +24,11 @@ const recipeSchema = mongoose.Schema(
       type: String,
       default: '',
     },
+    category: {
+      type: String,
+      enum: ['Breakfast', 'Main Course', 'Snack', 'Dessert', 'Drink', 'Other'],
+      default: 'Other',
+    },
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,

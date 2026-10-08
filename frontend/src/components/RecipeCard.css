@@ -75,3 +75,51 @@
   opacity: 1;
   color: var(--primary-color);
 }
+
+.category-badge {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #fff1f1;
+  color: #d9534f;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Category-coloured placeholders */
+.recipe-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.recipe-image-placeholder.cat-breakfast { background: linear-gradient(135deg, #f6d365, #fda085); }
+.recipe-image-placeholder.cat-main-course { background: linear-gradient(135deg, #f093a0, #e0555d); }
+.recipe-image-placeholder.cat-snack { background: linear-gradient(135deg, #84fab0, #3fb68b); }
+.recipe-image-placeholder.cat-dessert { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+.recipe-image-placeholder.cat-drink { background: linear-gradient(135deg, #5ee7df, #4a90e2); }
+.recipe-image-placeholder.cat-other { background: linear-gradient(135deg, #bdc3c7, #7f8c8d); }
+
+/* Card polish */
+.recipe-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.recipe-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-image {
+  background-size: cover;
+  background-position: center;
+}

@@ -29,7 +29,7 @@ const getRecipeById = async (req, res) => {
 // @route   POST /api/recipes
 // @access  Private
 const createRecipe = async (req, res) => {
-  const { title, description, ingredients, instructions, imageUrl } = req.body;
+  const { title, description, ingredients, instructions, imageUrl, category} = req.body;
 
   const recipe = new Recipe({
     title,
@@ -37,6 +37,7 @@ const createRecipe = async (req, res) => {
     ingredients,
     instructions,
     imageUrl,
+    category,
     createdBy: req.user._id,
   });
 
@@ -48,7 +49,7 @@ const createRecipe = async (req, res) => {
 // @route   PUT /api/recipes/:id
 // @access  Private
 const updateRecipe = async (req, res) => {
-  const { title, description, ingredients, instructions, imageUrl } = req.body;
+  const { title, description, ingredients, instructions, imageUrl, category } = req.body;
 
   const recipe = await Recipe.findById(req.params.id);
 
@@ -63,7 +64,7 @@ const updateRecipe = async (req, res) => {
     recipe.ingredients = ingredients || recipe.ingredients;
     recipe.instructions = instructions || recipe.instructions;
     recipe.imageUrl = imageUrl || recipe.imageUrl;
-
+    recipe.category = category || recipe.category;
     const updatedRecipe = await recipe.save();
     res.json(updatedRecipe);
   } else {
