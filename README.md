@@ -1,42 +1,32 @@
-# Recipe Explorer App
+# Recipe Explorer
 
-A full-stack recipe platform where users can sign up, log in, and create, save and manage their own recipes.
+A full-stack recipe platform where users discover, share and cook recipes.
 
-🔗 **Live Demo:** []
+**Live demo:** PASTE_YOUR_VERCEL_LINK_HERE
+(The backend runs on a free plan, so the first load can take up to a minute.)
 
-## 📸 Screenshots
+## Features
+- Sign up and log in (JWT authentication, bcrypt password hashing)
+- Create, edit and delete your own recipes
+- Search by title, description or ingredient, and filter by category
+- **What can I cook?** Enter the ingredients you have and see recipes ranked by match percentage, with the missing ingredients listed
+- Cooking mode with one step at a time, an ingredient checklist and a copyable shopping list
+- Save recipes to a favourites list
 
+## Tech stack
+- Frontend: React, React Router, Axios, Vite
+- Backend: Node.js, Express, JSON Web Tokens
+- Database: MongoDB Atlas (Mongoose)
+- Hosting: Vercel (frontend), Render (backend)
 
-## ✨ Features
-- User signup and login with JWT authentication
-- Passwords secured with Bcrypt hashing
-- Create, save, edit and delete your own recipes
-- RESTful APIs built with Node.js, Express and MongoDB
-- API endpoints tested with Postman
+## Run locally
+1. Clone the repo.
+2. Backend: `cd backend`, `npm install`, create a `.env` with `PORT`, `MONGO_URI` and `JWT_SECRET`, then `node server.js`.
+3. Optional sample data: sign up once in the app, then `npm run seed` in `backend`.
+4. Frontend: `cd frontend`, `npm install`, create a `.env` with `VITE_API_URL=http://localhost:5001/api`, then `npm run dev`.
 
-## 🛠️ Tech Stack
-**Frontend:** React
-**Backend:** Node.js, Express
-**Database:** MongoDB
-**Auth:** JWT, Bcrypt
+## Screenshots
+Add your screenshots here.
 
-## 🚀 Run Locally
-1. Clone the repo
-   git clone https://github.com/Pavnii7890/recipe-explorer-app.git
-2. Install dependencies for both parts
-   cd recipe-explorer-app
-   npm install
-3. Create a .env file in the backend folder
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
-   PORT=5000
-4. Start the backend and frontend
-   npm start
-
-## 🔮 Future Improvements
-- Search recipes by ingredient
-- Image upload for recipes
-- Favorites and ratings
-
-## 📫 Contact
-[https://www.linkedin.com/in/pavni-gupta-82b1b1326?utm_source=share_via&utm_content=profile&utm_medium=member_ios] | [pavnigupta0321@gmail.com]
+## Credits
+Food photos from Unsplash / Pexels. Add the photographers' names here.
