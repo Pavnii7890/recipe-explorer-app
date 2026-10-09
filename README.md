@@ -2,8 +2,7 @@
 
 A full-stack recipe platform where users discover, share and cook recipes.
 
-**Live demo:** PASTE_YOUR_VERCEL_LINK_HERE
-(The backend runs on a free plan, so the first load can take up to a minute.)
+**Live demo:** 
 
 ## Features
 - Sign up and log in (JWT authentication, bcrypt password hashing)
@@ -26,7 +25,8 @@ A full-stack recipe platform where users discover, share and cook recipes.
 4. Frontend: `cd frontend`, `npm install`, create a `.env` with `VITE_API_URL=http://localhost:5001/api`, then `npm run dev`.
 
 ## Screenshots
-Add your screenshots here.
+<img width="500" alt="home image" src="https://github.com/user-attachments/assets/3d030215-7f0c-4050-a08d-7a3f0b8fbeab" />
+<img width="500" alt="home image" src="https://github.com/user-attachments/assets/a0a15efd-6b4e-4c1b-ad56-55893ea7c565" />
+<img width="500" alt="home image" src="https://github.com/user-attachments/assets/28ae60bc-3534-4159-9339-68de4e5e5a98" />
+<img width="500" alt="home image" src="https://github.com/user-attachments/assets/b28d5fe9-8d2d-490f-86c8-8ee4d163a9d9" />
 
-## Credits
-Food photos from Unsplash / Pexels. Add the photographers' names here.
