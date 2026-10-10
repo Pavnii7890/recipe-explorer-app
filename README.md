@@ -3,6 +3,7 @@
 A full-stack recipe platform where users discover, share and cook recipes.
 
 **Live demo:** 
+recipe-explorer-app-liard.vercel.app
 
 ## Features
 - Sign up and log in (JWT authentication, bcrypt password hashing)
